@@ -64,8 +64,19 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.8.3")
     implementation("androidx.activity:activity-ktx:1.9.2")
 
-    //Test
+    //기본적인 Test 종속성
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    //optional - Test helpers for LiveData
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+    //optional - Test helpers for Lifecycle runtime
+    testImplementation ("androidx.lifecycle:lifecycle-runtime-testing:2.8.7")
+    testImplementation ("com.google.truth:truth:1.1.4")
+    testImplementation ("com.google.truth.extensions:truth-java8-extension:1.1.3")
+
+    //optional - Mockito
+    testImplementation("org.mockito:mockito-core:3.12.4")
 }
