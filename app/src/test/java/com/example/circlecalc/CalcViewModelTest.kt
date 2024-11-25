@@ -1,6 +1,7 @@
 package com.example.circlecalc
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.google.common.truth.Truth
 import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
@@ -28,13 +29,13 @@ class CalcViewModelTest {
     fun calculateCircumference_radiusSent_updateLiveData(){
         calcViewModel.calculateCircumference(1.0)
         val result: String? = calcViewModel.circumferenceValue.value
-        assertEquals("6.28", result)
+        Truth.assertThat(result).isEqualTo("6.28")
     }
 
     @Test
     fun calculateArea_radiusSent_updateLiveData(){
         calcViewModel.calculateArea(2.1)
         val result: String? = calcViewModel.areaValue.value
-        assertEquals("13.8474", result)
+        Truth.assertThat(result).isEqualTo("13.8474")
     }
 }

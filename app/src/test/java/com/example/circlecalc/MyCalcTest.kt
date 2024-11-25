@@ -1,5 +1,6 @@
 package com.example.circlecalc
 
+import com.google.common.truth.Truth
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -15,12 +16,12 @@ class MyCalcTest {
     @Test
     fun calculateCircumference_radiusGiven_returnsCorrectResult(){
         val result = myCalc.calculateCircumference(2.1)
-        assertEquals(13.188, result, 0.01)
+        Truth.assertThat(result).isEqualTo(13.188)
     }
 
     @Test
     fun calculateArea_radiusGiven_returnsCorrectResult(){
         val result = myCalc.calculateArea(2.1)
-        assertEquals(13.8474, result, 0.01)
+        Truth.assertThat(result).isEqualTo(13.8474)
     }
 }
