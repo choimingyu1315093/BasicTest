@@ -79,4 +79,8 @@ dependencies {
 
     //optional - Mockito
     testImplementation("org.mockito:mockito-core:3.12.4")
+
+    //optional - MockWebServer
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }
